@@ -1,0 +1,45 @@
+﻿@page
+@model RazorfrmCompleteCsharp1.IndexModel
+
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+
+   
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        @{
+            for (int i = 1; i < 6; i++)
+            {
+
+                <h4>@i Hello Razor. How Are You!</h4>
+            }
+        }
+
+        @{
+            @* //Using var Keyword – Implicitly Typed *@
+            var message = "Add Two Numbers";
+            var num1 = 5;
+            var sum = num1 + num1;
+            <h5>@message</h5>
+            <h5>@num1 + @num1 = @sum</h5>
+
+            @* //Using Explicit Data Type *@
+            int i = 10;
+            int result = i * i;
+            <h5>Using Explicit Data Types</h5>
+            <h5>@i  x @i  = @result</h5>
+        }
+    </body>
+</html>
+
+
+}
